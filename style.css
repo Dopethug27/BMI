@@ -1,0 +1,118 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: var(--background-gradient);
+    color: var(--text-color);
+    transition: background 0.7s, color 0.7s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+:root {
+    --background-gradient: linear-gradient(to right, #6a11cb, #2575fc);
+    --text-color: #fff;
+}
+
+[data-theme="dark"] {
+    --background-gradient: linear-gradient(to right, #000428, #004e92);
+    --text-color: #ccc;
+}
+
+[data-theme="dark"] .container {
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.8);
+}
+
+/* Theme Toggle */
+.theme-toggle {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #ffcc00;
+    color: #000;
+    font-size: 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background 0.7s;
+    z-index: 1000;
+}
+
+[data-theme="dark"] .theme-toggle {
+    background-color: #333;
+    color: #ffcc00;
+}
+
+/* Container Styles */
+.container {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 360px;
+    animation: fadeIn 0.8s ease-out;
+    backdrop-filter: blur(8px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Input Group */
+.input-group {
+    margin: 15px 0;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    font-size: 1rem;
+}
+
+/* Button Styles */
+.button-group button {
+    background-color: #2575fc;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 15px;
+    margin: 10px 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.5s ease;
+}
+
+.button-group button:hover {
+    background-color: #6a11cb;
+}
+
+/* Loader */
+.loader {
+    display: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--text-color);
+    margin-top: 20px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}

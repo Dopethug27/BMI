@@ -1,0 +1,37 @@
+/* Default (Day Mode) */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('samsung-galaxy-tab-3840x2160-19353.png') no-repeat center center fixed;
+    background-size: cover;
+    color: #000;
+    transition: background 0.7s, color 0.7s;
+}
+
+/* Night Mode */
+body.night {
+    background: url('gradient-background-3840x2160-11027.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #ccc;
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #ffcc00;
+    color: #000;
+    font-size: 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background 0.7s;
+}
+
+body.night .theme-toggle {
+    background-color: #333;
+    color: #ffcc00;
+}
